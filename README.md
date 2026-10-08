@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sisters of Pearl
 
-## Getting Started
+Static marketing homepage for **Sisters of Pearl** — Chinese / Cantonese dining in Glen Waverley.
 
-First, run the development server:
+## Stack
+
+- Next.js (App Router)
+- React (JavaScript)
+- Tailwind CSS v4
+- GSAP + ScrollTrigger
+- `next/image`
+
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+> On this Windows environment, webpack is used (`next dev --webpack` / `next build --webpack`) because Turbopack native bindings may be blocked.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Business data
 
-## Learn More
+All contact, hours, menu, and offer data lives in:
 
-To learn more about Next.js, take a look at the following resources:
+`data/sistersOfPearl.js`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Pricing rule:** prices are only set when visibly verified. Current research could not confirm legible menu prices, so the UI shows **Enquire**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Images
 
-## Deploy on Vercel
+Temporary editorial placeholders live in:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`public/images/sisters-of-pearl/`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Replace these with client-supplied photography when available. Filenames are stable for easy swaps.
