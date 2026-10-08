@@ -25,9 +25,6 @@ export default function MenuItemRow({
           <p className="font-[family-name:var(--font-display)] text-2xl tracking-[0.01em] text-ink transition-transform duration-300 group-hover:translate-x-3 md:text-[1.75rem]">
             {item.name}
           </p>
-          {item.chineseName && (
-            <p className="mt-1 text-[0.95rem] font-medium text-muted">{item.chineseName}</p>
-          )}
           {item.description && (
             <p className="mt-2 max-w-md text-[1.02rem] font-medium leading-relaxed text-charcoal">
               {item.description}

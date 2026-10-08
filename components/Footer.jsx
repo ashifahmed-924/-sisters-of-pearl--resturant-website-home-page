@@ -159,8 +159,8 @@ export default function Footer() {
       />
 
       <div className="relative z-10 mx-auto flex max-w-[1600px] flex-col gap-6 px-5 py-8 md:px-8 md:py-9 lg:px-12 xl:px-14">
-        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between md:gap-8">
-          <div data-footer-reveal className="max-w-[16rem]">
+        <div className="site-footer__grid">
+          <div data-footer-reveal className="site-footer__brand">
             <p className="font-[family-name:var(--font-micro)] text-[9px] uppercase tracking-[0.28em] text-[color:var(--hero-gold)]">
               Sisters of Pearl
             </p>
@@ -173,7 +173,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div data-footer-reveal className="flex flex-col gap-1.5">
+          <div data-footer-reveal className="site-footer__contact flex flex-col gap-1.5">
             <p className="font-[family-name:var(--font-micro)] text-[9px] uppercase tracking-[0.24em] text-[color:var(--hero-gold)]">
               Contact
             </p>
@@ -185,7 +185,7 @@ export default function Footer() {
             </a>
             <a
               href={business.emailMailto}
-              className="site-footer__link break-all text-[0.95rem] font-medium text-[color:var(--hero-ink-soft)]"
+              className="site-footer__link break-words text-[0.95rem] font-medium text-[color:var(--hero-ink-soft)]"
             >
               {business.email}
             </a>
@@ -193,7 +193,7 @@ export default function Footer() {
 
           <nav
             data-footer-reveal
-            className="flex flex-wrap gap-x-5 gap-y-2"
+            className="site-footer__nav-block"
             aria-label="Footer"
           >
             {NAV_LINKS.map((link) => (
@@ -207,7 +207,7 @@ export default function Footer() {
             ))}
           </nav>
 
-          <div data-footer-reveal>
+          <div data-footer-reveal className="site-footer__follow">
             <p className="font-[family-name:var(--font-micro)] text-[9px] uppercase tracking-[0.24em] text-[color:var(--hero-gold)]">
               Follow
             </p>
@@ -233,7 +233,7 @@ export default function Footer() {
 
         <div
           data-footer-reveal
-          className="flex flex-wrap items-center justify-between gap-3 border-t border-[rgba(90,61,39,0.12)] pt-4"
+          className="site-footer__meta flex flex-wrap items-center justify-between gap-3 border-t border-[rgba(90,61,39,0.12)] pt-4"
         >
           <p className="font-[family-name:var(--font-micro)] text-[9px] uppercase tracking-[0.2em] text-[color:var(--hero-ink-soft)]">
             © 2026 Sisters of Pearl

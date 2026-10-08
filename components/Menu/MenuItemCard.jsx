@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { formatPrice } from "@/data/sistersOfPearl";
+import { business, formatPrice } from "@/data/sistersOfPearl";
 
 export default function MenuItemCard({ item }) {
   const priceLabel = formatPrice(item.price);
+  const isEnquire = priceLabel === "Enquire";
   const imageSrc = item.image || "/images/sisters-of-pearl/table-detail.jpg";
 
   return (
@@ -23,13 +24,20 @@ export default function MenuItemCard({ item }) {
       </div>
       <div className="menu-card__body">
         <h4 className="menu-card__title">{item.name}</h4>
-        {item.chineseName && (
-          <p className="menu-card__chinese">{item.chineseName}</p>
-        )}
         {item.description && (
           <p className="menu-card__desc">{item.description}</p>
         )}
-        <p className="menu-card__price">{priceLabel}</p>
+        {isEnquire ? (
+          <a
+            href={business.emailMailto}
+            className="menu-card__enquire"
+            aria-label={`Enquire about ${item.name}`}
+          >
+            Enquire
+          </a>
+        ) : (
+          <p className="menu-card__price">{priceLabel}</p>
+        )}
       </div>
     </article>
   );

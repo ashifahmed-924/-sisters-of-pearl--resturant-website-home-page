@@ -254,8 +254,8 @@ export default function HoursSection() {
           </p>
         </header>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 lg:mt-10 lg:grid-cols-12 lg:gap-10 xl:gap-12">
-          <div className="lg:col-span-7">
+        <div className="mt-8 grid grid-cols-1 gap-8 md:mt-10 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-12">
+          <div className="md:col-span-6 lg:col-span-7">
             <ul className="hours-list">
               {business.hours.map((row, index) => {
                 const isToday = index === todayIndex;
@@ -291,7 +291,7 @@ export default function HoursSection() {
             </ul>
           </div>
 
-          <aside className="hours-contact lg:col-span-5">
+          <aside className="hours-contact md:col-span-6 lg:col-span-5">
             <div className="hours-contact__panel">
               <p
                 data-hours-contact
